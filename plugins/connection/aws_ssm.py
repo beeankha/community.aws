@@ -439,7 +439,7 @@ def filter_ansi(line: str, is_windows: bool) -> str:
 @dataclass
 class Command:
     """
-    Custom command dataclass for the generated command dictionaries.
+    Custom dataclass for the generated command dictionaries.
     """
 
     command: str
