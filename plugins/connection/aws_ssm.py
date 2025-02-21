@@ -438,6 +438,10 @@ def filter_ansi(line: str, is_windows: bool) -> str:
 
 @dataclass
 class Command:
+    """
+    Custom command dataclass for the generated command dictionaries.
+    """
+
     command: str
     method: str  # 'get' or 'put'
     headers: Dict[str, str]
@@ -445,6 +449,10 @@ class Command:
 
 @dataclass
 class CommandResult:
+    """
+    Custom dataclass for the executed command results.
+    """
+
     returncode: int
     stdout_combined: str
     stderr_combined: str
