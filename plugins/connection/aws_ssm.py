@@ -332,7 +332,6 @@ import select
 import string
 import subprocess
 import time
-from typing import Callable
 from typing import Dict
 from typing import List
 from typing import NoReturn
@@ -573,12 +572,7 @@ class Connection(ConnectionBase):
         else:
             host_args = {}
 
-        verbosity_level = {
-            1: display.v,
-            2: display.vv,
-            3: display.vvv,
-            4: display.vvvv
-        }
+        verbosity_level = {1: display.v, 2: display.vv, 3: display.vvv, 4: display.vvvv}
 
         verbosity_level[level](to_text(message), **host_args)
 
